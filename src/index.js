@@ -12,7 +12,9 @@ app.set('views', './src/views');
 app.use('/static', express.static('src/public')); // set path: 'static' for css request with path static/css/style.css to search instead in public
 
 app.get('/', (req, res) => {
-    res.render('home', { layout: false });
+    res.render('home');
 });
+
+
 
 app.listen(5000, () => console.log('Server is listening on http://localhost:5000...'));
