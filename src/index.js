@@ -9,7 +9,7 @@ app.engine('hbs', handlebars.engine({
 app.set('view engine', 'hbs');
 app.set('views', './src/views');
 
-app.use(express.static('src/public'));
+app.use('/static', express.static('src/public')); // set path: 'static' for css request with path static/css/style.css to search instead in public
 
 app.get('/', (req, res) => {
     res.render('home', { layout: false });
