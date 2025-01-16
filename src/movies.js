@@ -4,7 +4,7 @@ export default [
         title: 'Jungle Cuise',
         genre: 'Adventure',
         year: '2021',
-        rating: '6.6',
+        rating: 6.6,
         director: 'Jaume Collet-Serra',
         category: 'movie',
         description: 'Dreaming about saving countless lives and having another adventure, the feisty English feminist and doctor of botany, Dr Lily Houghton, embarks on a peril-laden mission to change the world. Along with her fashionable brother, MacGregor, Dr Houghton enlists the help of the arrogant, wisecracking riverboat skipper, Captain Frank Wolff, to guide them through the serpentine Amazon River in La Quila, his swift wooden boat. Now, as the intrepid trio ventures deeper and deeper into the heart of an impenetrable green maze, searching for something that cannot be found, a centuries-old curse and the ruthless aristocrat, Prince Joachim, threaten to put an end to their ambitious plans.',
@@ -15,7 +15,7 @@ export default [
         title: 'Sonic the Hedgehog 3',
         genre: 'Fantasy',
         year: '2024',
-        rating: '7.2',
+        rating: 7.2,
         director: 'Jeff Fowler',
         category: 'movie',
         description: 'Sonic, Knuckles, and Tails reunite against a powerful new adversary, Shadow, a mysterious villain with powers unlike anything they have faced before. With their abilities outmatched, Team Sonic must seek out an unlikely alliance..',
@@ -26,7 +26,7 @@ export default [
         title: 'Gladiator II',
         genre: 'Action',
         year: '2024',
-        rating: '6.7',
+        rating: 6.7,
         director: 'Ridley Scott',
         category: 'movie',
         description: 'After his home is conquered by the tyrannical emperors who now lead Rome, Lucius is forced to enter the Colosseum and must look to his past to find strength to return the glory of Rome to its people.',
@@ -40,7 +40,7 @@ export default [
         director: 'Joe Russo',
         year: '2019',
         imageUrl: 'https://www.telegraph.co.uk/content/dam/films/2019/04/13/TELEMMGLPICT000193767647_trans_NvBQzQNjv4Bq7OLvB-m2XzG_BNLy2OXVPrT5LfTkYhqvBvjfatlPy1M.jpeg?imwidth=680',
-        rating: '8.4',
+        rating: 8.4,
         description: "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
     }
 ]
