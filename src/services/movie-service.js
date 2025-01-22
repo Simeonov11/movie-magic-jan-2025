@@ -38,12 +38,20 @@ export default {
         return result;
     },
     async attachCast(movieId, castId) {
-        // Attach #1
-        const movie = await Movie.findById(movieId);
-        movie.casts.push(castId);
-        await movie.save();
+    
+        // // Attach #1 way
+        // const movie = await Movie.findById(movieId);
+        // // Check if castId is not added already
+        // if (movie.casts.includes(castId)) {
+        //     return;
+        // }
+        // movie.casts.push(castId);
+        // await movie.save();
 
-        return movie;
-        // Attach #2
+        // return movie;
+
+
+        // Attach #2 way
+        // return Movie.findByIdAndUpdate(movieId, { $push: { casts: castId } });  // MongoDB way
     }
 }
