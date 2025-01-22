@@ -25,6 +25,9 @@ export default {
 
         return result;
     },
+    getOneWithCasts(movieId) {
+        return this.getOne(movieId).populate('casts'); // populate the movie object from DB including the full array of objects for the casts ID's (see movie-controller console.log(movie))
+    },
     create(movieData) {
         const result = Movie.create({
             ...movieData,
