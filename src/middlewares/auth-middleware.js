@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 
 const SECRET = process.env.JWT_SECRET || 'BASICSECRET';
 
+// this middleware is executing on every request
 export const authMiddleware = (req, res, next) => {
     console.log(req.url);
 

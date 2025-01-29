@@ -28,11 +28,12 @@ export default {
     getOneWithCasts(movieId) {
         return this.getOne(movieId).populate('casts'); // populate the movie object from DB including the full array of objects for the casts ID's (see movie-controller console.log(movie))
     },
-    create(movieData) {
+    create(movieData, creatorId) {
         const result = Movie.create({
             ...movieData,
             rating: Number(movieData.rating), // re-assign new value for rating
             year: Number(movieData.year),
+            creator: creatorId,
         });
 
         return result;
