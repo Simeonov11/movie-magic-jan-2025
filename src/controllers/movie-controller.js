@@ -26,6 +26,8 @@ movieController.post('/create', async (req, res) => {
 });
 
 movieController.get('/:movieId/details', async (req, res) => {
+    console.log(req.user);
+    
     const movieId = req.params.movieId;
 
     // Get movie data for movieId
