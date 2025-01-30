@@ -38,7 +38,7 @@ export default {
 
         return result;
     },
-    async attachCast(movieId, castId) {
+    attachCast(movieId, castId) {
     
         // // Attach #1 way
         // const movie = await Movie.findById(movieId);
@@ -54,5 +54,8 @@ export default {
 
         // Attach #2 way
         // return Movie.findByIdAndUpdate(movieId, { $push: { casts: castId } });  // MongoDB way
+    },
+    delete(movieId) {
+        return Movie.findByIdAndDelete(movieId);
     }
 }
