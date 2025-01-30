@@ -38,7 +38,8 @@ movieController.get('/:movieId/details', async (req, res) => {
     console.log(movie.creator);
     console.log(req.user.id);
 
-    const isCreator = movie.creator && movie.creator.toString() === req.user?.id;
+    //const isCreator = movie.creator && movie.creator?.toString() === req.user?.id;  //if creator is undefined it crash
+    const isCreator = movie.creator?.equals(req.user?.id);
     res.render('movie/details', { movie, isCreator });
 });
 

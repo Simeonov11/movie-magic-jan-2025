@@ -19,6 +19,7 @@ export const authMiddleware = (req, res, next) => {
 
         // Attach decoded token to request
         req.user = decodedToken;
+        res.locals.user = decodedToken; // Handlebars search locals and give locals info to the context of every view on rendering. Every template will have access to the user automaticaly
 
         next();
     } catch (err) {
