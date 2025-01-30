@@ -28,6 +28,13 @@ export const authMiddleware = (req, res, next) => {
         res.clearCookie('auth');
         res.redirect('/auth/login');
     }
+};
 
+// This middleware to work when user is not authorised ( GoTo: movieControler, restricted actions as the create, edit, delete )
+export const isAuthorised = (req, res) => {
+    if (!req.user) {
+        return res.redirect('/auth/login');
+    }
 
+    next();
 };
