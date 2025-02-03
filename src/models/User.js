@@ -15,8 +15,15 @@ const userSchema = new Schema({
     },
 });
 
+// validation for rePassword at The Model level (or do it on service level)
+userSchema.virtual('rePassword')
+    .set(function(rePassword) {
+        if (rePassword !== this.password) {
+            throw new Error('Password missmatch');
+        }
+    });
+
 userSchema.pre('save', async function () {
-    // TODO: fix update user bug
     this.password = await bcrypt.hash(this.password, 10); // will generate salt with 10 rounds
 });
 
