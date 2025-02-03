@@ -25,6 +25,7 @@ export const authMiddleware = (req, res, next) => {
     } catch (err) {
         console.log(err.messate);
         // If Invalid token
+        res.setError('Invalid Authentication!');
         res.clearCookie('auth');
         res.redirect('/auth/login');
     }
@@ -33,6 +34,7 @@ export const authMiddleware = (req, res, next) => {
 // This middleware to work when user is not authorised ( GoTo: movieControler, restricted actions as the create, edit, delete )
 export const isAuthorised = (req, res) => {
     if (!req.user) {
+        res.setErroor('You must be logged in in order to do that!');
         return res.redirect('/auth/login');
     }
 
